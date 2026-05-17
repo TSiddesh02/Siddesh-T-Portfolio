@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddesh — Data Analyst</title>
+  <meta name="description" content="Data Analyst specializing in business intelligence, strategic analysis, and executive-grade insights. Turning complexity into clarity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    /* Critical: keep animated elements hidden until animation fires */
+    body { opacity: 1; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="motion.css" />
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="pre-logo">Siddesh<span>.Thammadaveni</span></div>
+    <div class="pre-bar-wrap"><div class="pre-bar"></div></div>
+  </div>
+
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Siddesh<span class="accent">.Thammadaveni</span></a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#case-studies">Studies</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Elegant Full-screen Canvas Data Flow -->
+    <div class="hero-flow-container">
+      <canvas id="hero-flow-canvas"></canvas>
+    </div>
+
+    <div class="hero-availability">
+      <span class="dot"></span>
+      Available for new engagements
+    </div>
+
+    <div class="hero-grid">
+      <!-- Content Container -->
+      <div class="hero-content">
+        <h1 class="hero-headline">
+          <div class="hl-wrap"><span class="hl-1">Data tells <em>stories.</em></span></div>
+          <div class="hl-wrap"><span class="hl-2"><span class="accent">I make them matter.</span></span></div>
+        </h1>
+        <p class="hero-sub">
+          Business intelligence &amp; strategic analytics for decisions that move numbers — not just charts.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">View Selected Work</a>
+          <a href="#contact" class="btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- HAIRLINE -->
+  <div class="hairline"></div>
+
+  <!-- SELECTED WORK — Sticky Stack Narrative -->
+  <section id="work" class="stack-section">
+    <div class="section-header io-hidden">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-desc">Real problems. Analytical rigor. Measurable impact.</p>
+    </div>
+    
+    <div class="work-stack-container">
+      
+      <!-- Story Card 1 -->
+      <div class="stack-card" id="sc-1">
+        <div class="sc-content">
+          <div class="sc-meta"><span class="tag">Pricing Intelligence</span><span class="tag">Retail</span></div>
+          <h3 class="sc-title">Dynamic Pricing Engine &amp; Demand Forecasting</h3>
+          <p class="sc-desc">Retailers often price blindly. I built an optimization model across 14,000 SKUs that integrated elasticity curves with real-time competitor scraping, surfacing immediate arbitrage windows.</p>
+          <div class="sc-metrics">
+            <div class="s-metric"><span class="s-val accent">+23%</span><span class="s-label">Gross Margin</span></div>
+            <div class="s-metric"><span class="s-val">$2.1M</span><span class="s-label">Revenue Uplift</span></div>
+          </div>
+        </div>
+        <div class="sc-visual">
+          <!-- Pricing intersecting curves SVG -->
+          <svg viewBox="0 0 400 300" class="story-svg" id="svg-pricing">
+            <path class="s-line s-demand" d="M 50 50 Q 200 150 350 250" fill="none" stroke="#555" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="1000" />
+            <path class="s-line s-supply" d="M 50 250 Q 200 150 350 50" fill="none" stroke="#1D9E75" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="1000" />
+            <circle class="s-dot" cx="200" cy="150" r="0" fill="#fff" />
+            <text class="s-text" x="200" y="130" opacity="0" fill="#1D9E75" font-size="12" text-anchor="middle">OPTIMAL PRICE POINT</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Story Card 2 -->
+      <div class="stack-card" id="sc-2">
+        <div class="sc-content">
+          <div class="sc-meta"><span class="tag">Churn Analysis</span><span class="tag">SaaS</span></div>
+          <h3 class="sc-title">Customer Churn Prediction &amp; Retention Playbook</h3>
+          <p class="sc-desc">Losing customers is expensive. I engineered a survival-analysis model for a B2B SaaS firm that delivered a predictive account health score, flagging at-risk customers 60 days ahead of renewal.</p>
+          <div class="sc-metrics">
+            <div class="s-metric"><span class="s-val accent">−31%</span><span class="s-label">Churn Rate</span></div>
+            <div class="s-metric"><span class="s-val">$900k</span><span class="s-label">ARR Saved</span></div>
+          </div>
+        </div>
+        <div class="sc-visual">
+          <!-- Funnel / Churn retention SVG -->
+          <svg viewBox="0 0 400 300" class="story-svg" id="svg-churn">
+            <path class="s-area" d="M 50 50 L 350 50 L 250 250 L 150 250 Z" fill="rgba(85,85,85,0.1)" />
+            <path class="s-line s-retention" d="M 50 50 L 350 50 L 300 150 L 350 250 L 50 250 L 100 150 Z" fill="none" stroke="#1D9E75" stroke-width="2" stroke-dasharray="1500" stroke-dashoffset="1500" />
+            <text class="s-text" x="200" y="150" opacity="0" fill="#1D9E75" font-size="14" text-anchor="middle">RETAINED COHORT</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Story Card 3 -->
+      <div class="stack-card" id="sc-3">
+        <div class="sc-content">
+          <div class="sc-meta"><span class="tag">Supply Chain</span><span class="tag">Logistics</span></div>
+          <h3 class="sc-title">Disruption Risk Modeling</h3>
+          <p class="sc-desc">Global supply chains are fragile. I mapped supplier dependency networks across 3 continents, building a risk score dashboard that gave procurement leads 90-day lead times on critical bottlenecks.</p>
+          <div class="sc-metrics">
+            <div class="s-metric"><span class="s-val accent">$1.4M</span><span class="s-label">Cost Avoidance</span></div>
+            <div class="s-metric"><span class="s-val">90d</span><span class="s-label">Early Warning</span></div>
+          </div>
+        </div>
+        <div class="sc-visual">
+          <!-- Node network SVG -->
+          <svg viewBox="0 0 400 300" class="story-svg" id="svg-supply">
+            <g class="s-nodes">
+              <!-- Animated via JS -->
+            </g>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HAIRLINE -->
+  <div class="hairline"></div>
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-desc">Executive-level investigations. Strategic depth. Repeatable outcomes.</p>
+    </div>
+
+    <!-- Study 1 -->
+    <div class="study" id="study-1">
+      <div class="study-left">
+        <div class="study-tag-row">
+          <span class="tag">Retail</span>
+          <span class="tag">Pricing</span>
+        </div>
+        <h3 class="study-title">How a Retailer Recovered $2.1M in Margin Without Raising Prices</h3>
+        <div class="study-timeline">
+          <div class="timeline-item">
+            <span class="timeline-label">Context</span>
+            <p>A national retail chain with 400 locations was experiencing persistent margin erosion despite stable sales volumes. Pricing decisions were based on quarterly category reviews — far too slow for a dynamic market.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-label">Approach</span>
+            <p>Built demand elasticity models per SKU cluster using 3 years of POS data, layered with competitor price signals scraped daily. Ran A/B pricing experiments across 8 pilot stores over 90 days.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-label">Outcome</span>
+            <p>Rolled out dynamic pricing recommendations across all 14,000 SKUs. Gross margin improved 23% YoY with zero increase to shelf price for >80% of items.</p>
+          </div>
+        </div>
+      </div>
+      <div class="study-right">
+        <div class="study-stat-block">
+          <div class="big-stat">
+            <span class="big-num accent">+23%</span>
+            <span class="big-label">Gross Margin Improvement</span>
+          </div>
+          <div class="study-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">SQL</span>
+            <span class="tool-tag">Spark</span>
+            <span class="tool-tag">Tableau</span>
+            <span class="tool-tag">Statsmodels</span>
+          </div>
+          <div class="study-mini-chart">
+            <canvas id="studyChart1"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hairline hairline--inset"></div>
+
+    <!-- Study 2 -->
+    <div class="study study--reverse" id="study-2">
+      <div class="study-left">
+        <div class="study-tag-row">
+          <span class="tag">SaaS</span>
+          <span class="tag">Retention</span>
+        </div>
+        <h3 class="study-title">Predicting Customer Churn 60 Days Before It Happens</h3>
+        <div class="study-timeline">
+          <div class="timeline-item">
+            <span class="timeline-label">Context</span>
+            <p>A fast-growing B2B SaaS company with 3,000 enterprise accounts was experiencing unexpected churn spikes at renewal. Customer success had no systematic early-warning system.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-label">Approach</span>
+            <p>Built a survival analysis model using product usage telemetry, support ticket sentiment, and CRM engagement signals. Developed an account health score surfaced in Salesforce dashboards for CS reps.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-label">Outcome</span>
+            <p>Model achieved 87% precision at 60-day lead time. Proactive outreach campaigns reduced churn by 31% — saving approximately $900K in ARR in the first year of deployment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="study-right">
+        <div class="study-stat-block">
+          <div class="big-stat">
+            <span class="big-num accent">−31%</span>
+            <span class="big-label">Customer Churn Reduction</span>
+          </div>
+          <div class="study-tools">
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">scikit-learn</span>
+            <span class="tool-tag">Salesforce</span>
+            <span class="tool-tag">dbt</span>
+            <span class="tool-tag">BigQuery</span>
+          </div>
+          <div class="study-mini-chart">
+            <canvas id="studyChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAIRLINE -->
+  <div class="hairline"></div>
+
+  <!-- TECHNICAL STACK -->
+  <section id="stack">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Technical Stack</h2>
+      <p class="section-desc">Tools chosen for precision, not familiarity.</p>
+    </div>
+
+    <div class="pipeline" id="pipeline">
+      <!-- Node 1 -->
+      <div class="pipe-node" id="pn-1" data-stage="Raw Data">
+        <span class="pipe-node-label">Raw Data</span>
+        <div class="pipe-node-body">
+          <span class="pipe-tool">BigQuery</span>
+          <span class="pipe-tool">Snowflake</span>
+          <span class="pipe-tool">Kafka</span>
+        </div>
+      </div>
+      <div class="pipe-connector" id="pc-1"><svg viewBox="0 0 80 2" preserveAspectRatio="none"><line id="pcl-1" x1="0" y1="1" x2="80" y2="1" stroke="#2a2a2a" stroke-width="1.5"/></svg><div class="pipe-particle" id="pp-1"></div></div>
+      <!-- Node 2 -->
+      <div class="pipe-node" id="pn-2" data-stage="Ingestion">
+        <span class="pipe-node-label">Ingestion</span>
+        <div class="pipe-node-body">
+          <span class="pipe-tool">Fivetran</span>
+          <span class="pipe-tool">Airbyte</span>
+          <span class="pipe-tool">Airflow</span>
+        </div>
+      </div>
+      <div class="pipe-connector" id="pc-2"><svg viewBox="0 0 80 2" preserveAspectRatio="none"><line id="pcl-2" x1="0" y1="1" x2="80" y2="1" stroke="#2a2a2a" stroke-width="1.5"/></svg><div class="pipe-particle" id="pp-2"></div></div>
+      <!-- Node 3 -->
+      <div class="pipe-node" id="pn-3" data-stage="Transform">
+        <span class="pipe-node-label">Transform</span>
+        <div class="pipe-node-body">
+          <span class="pipe-tool">dbt</span>
+          <span class="pipe-tool">Spark</span>
+          <span class="pipe-tool">SQLMesh</span>
+        </div>
+      </div>
+      <div class="pipe-connector" id="pc-3"><svg viewBox="0 0 80 2" preserveAspectRatio="none"><line id="pcl-3" x1="0" y1="1" x2="80" y2="1" stroke="#2a2a2a" stroke-width="1.5"/></svg><div class="pipe-particle" id="pp-3"></div></div>
+      <!-- Node 4 -->
+      <div class="pipe-node" id="pn-4" data-stage="Modelling">
+        <span class="pipe-node-label">Modelling</span>
+        <div class="pipe-node-body">
+          <span class="pipe-tool">scikit-learn</span>
+          <span class="pipe-tool">XGBoost</span>
+          <span class="pipe-tool">statsmodels</span>
+        </div>
+      </div>
+      <div class="pipe-connector" id="pc-4"><svg viewBox="0 0 80 2" preserveAspectRatio="none"><line id="pcl-4" x1="0" y1="1" x2="80" y2="1" stroke="#2a2a2a" stroke-width="1.5"/></svg><div class="pipe-particle" id="pp-4"></div></div>
+      <!-- Node 5 -->
+      <div class="pipe-node" id="pn-5" data-stage="Visualisation">
+        <span class="pipe-node-label">Visualisation</span>
+        <div class="pipe-node-body">
+          <span class="pipe-tool">Tableau</span>
+          <span class="pipe-tool">Looker</span>
+          <span class="pipe-tool">Plotly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAIRLINE -->
+  <div class="hairline"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">About</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-terminal" id="about-terminal">
+          <p class="about-body about-type-line" data-text="I'm Siddesh Thammadaveni — a data analyst with a background in economics and computer science. I work at the intersection of business strategy and quantitative analysis, helping organizations turn raw data into decisions that compound."></p>
+          <p class="about-body about-type-line" data-text="Most of my work lives where data meets urgency — pricing desks, executive dashboards, risk models, and growth levers. I'm not interested in dashboards for dashboards' sake. I'm interested in the question the business actually needs answered."></p>
+          <p class="about-body about-type-line" data-text="Previously at McKinsey &amp; Company (Analytics Practice), a Series B FinTech, and independently as an analytics consultant to retail and SaaS businesses."></p>
+        </div>
+        <div class="about-credentials">
+          <div class="credential">
+            <span class="credential-val">5+</span>
+            <span class="credential-label">Years of practice</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">30+</span>
+            <span class="credential-label">Projects shipped</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">$12M+</span>
+            <span class="credential-label">Business value created</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-visual">
+          <div class="about-bar-chart" id="aboutChart">
+            <div class="bar-row">
+              <span class="bar-label">Statistical Modeling</span>
+              <div class="bar-track"><div class="bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Business Intelligence</span>
+              <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Data Engineering</span>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Executive Storytelling</span>
+              <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Product Analytics</span>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+          </div>
+          <div class="about-visual-label">Competency profile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAIRLINE -->
+  <div class="hairline"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner centered-contact">
+      <div class="contact-left">
+        <span class="section-num">05</span>
+        <h2 class="contact-headline">Let's work<br/><span class="accent">together.</span></h2>
+        <p class="contact-sub">Whether you need a one-time analysis, an embedded analytics partner, or a strategic data function — I'd like to hear about your problem first.</p>
+        <div class="contact-links-row">
+          <a href="mailto:siddesh1832@gmail.com" class="contact-link" id="email-link">
+            <svg class="cl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div class="cl-text">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-val">siddesh1832@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/thammadaveni-siddesh-1496b5256/" target="_blank" rel="noopener" class="contact-link" id="linkedin-link">
+            <svg class="cl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <div class="cl-text">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-val">Siddesh Thammadaveni</span>
+            </div>
+          </a>
+          <a href="https://github.com/TSiddesh02" target="_blank" rel="noopener" class="contact-link" id="github-link">
+            <svg class="cl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <div class="cl-text">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-val">TSiddesh02</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner footer-flex">
+      <div class="footer-brand">
+        <span class="footer-logo">Siddesh<span class="accent">.Thammadaveni</span></span>
+        <span class="footer-tagline">Data Analyst · Business Intelligence</span>
+      </div>
+      <div class="footer-socials">
+        <a href="mailto:siddesh1832@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        <a href="https://www.linkedin.com/in/thammadaveni-siddesh-1496b5256/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="https://github.com/TSiddesh02" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+      </div>
+      <div class="footer-copy-container">
+        <span class="footer-copy">© 2026 Siddesh Thammadaveni. All work is original.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="story.js"></script>
+  <script src="panels.js"></script>
+</body>
+</html>
